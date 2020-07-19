@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('onload')
+    wx.request({
+      url: 'http://112.124.24.144:8080/list',
+      success: (res)=>{
+        console.log(res)
+        const data = res.data;
+        this.setData({
+          list: data
+        })
+      }
+    })
   },
 
   /**
