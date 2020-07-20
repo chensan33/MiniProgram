@@ -1,0 +1,17 @@
+<!-- 1.image标签 -->
+<!-- image 默认大小是320*240 -->
+<image src="../../assets/asuka.jpg"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src='{{imagePath}}'></image>
+<view>-----------------</view>
+<!-- 图片懒加载 lazy-load-->
+<image wx:for="{{1}}" lazy-load src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- show-menu-by-longpress 常按显示识别小程序码-->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" show-menu-by-longpress></image>
+<!-- mode属性： 重点 -->
+<image src="../../assets/asuka.jpg" mode="aspectFit"></image>
+<image src="../../assets/asuka.jpg" mode="aspectFill"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" mode="top"></image>

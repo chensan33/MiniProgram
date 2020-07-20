@@ -1,0 +1,12 @@
+<!-- 1.input -->
+<input></input>
+<!-- 2.value属性 -->
+<input value="哈哈哈"></input>
+<!-- 3.type属性 -->
+<input type="text"></input>
+<!-- 4.password属性 -->
+<input password></input>
+<!-- 5.placeholder属性 -->
+<input placeholder="请输入内容"></input>
+<!-- 6.input绑定事件 -->
+<input bindinput="bindInput" bindfocus="bindFocus" bindblur="bindBlur"></input>

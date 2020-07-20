@@ -1,0 +1,10 @@
+<!--pages/view/view.wxml-->
+<view>哈哈哈</view>
+<!--1.hover-class-->
+<view class="b1" hover-class="box1">box1</view>
+
+<!--2.hover-stop-propagation阻止事件冒泡-->
+<view class="b3" hover-class="box3">
+  <view class="b2" hover-class="box2" hover-stop-propagation>box2</view>
+</view>
+

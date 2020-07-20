@@ -1,0 +1,8 @@
+<!--pages/txt/txt.wxml-->
+<text>组件的相同特性:</text>
+<view>1.id String</view>
+<view>2.class String</view>
+<view>3.style String</view>
+<view>4.hidden: Boolean 组件是否显示</view>
+<view>5.data：Any 自定义属性 组件上触发的事件时，会发送给事件处理函数</view>
+<view>6.bind：EventHandler 组件的事件</view>
