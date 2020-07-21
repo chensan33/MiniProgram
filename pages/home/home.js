@@ -1,66 +1,63 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    titles: ['衣服','裤子','鞋子']
+  },
+  handleBindClick(){
+    console.log('按钮发生了点击')
+  },
+  handleTouchStart(){
+    console.log('handleTouchStart')
+  },
+  handleTouchMove(){
+    console.log('handleTouchMove')
+  },
+  handleTouchEnd(){
+    console.log('handleTouchEnd')
+  },
+  handleTap(){
+    console.log('handleTouchTap')
+  },
+  handleLongpress(){
+    console.log('handleLongpress')
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleEventClick(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleEventEnd(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleInner(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleOuter(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleItemClick(event){
+    console.log(event)
+    const dataset = event.currentTarget.dataset;
+    const index = dataset.index
+    const item = dataset.item
+    console.log(item,index)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  //---------------事件冒泡和事件捕获--------------------------
+  captrueView1(){
+    console.log('captrueView1')
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  bindView1(){
+    console.log('bindView1')
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  captrueView2(){
+    console.log('captrueView2')
+  },
+  bindView2(){
+    console.log('bindView2')
+  },
+  captrueView3(){
+    console.log('captrueView3')
+  },
+  bindView3(){
+    console.log('bindView3')
   }
 })
