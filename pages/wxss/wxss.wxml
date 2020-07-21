@@ -1,0 +1,29 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1.样式的三种写法 -->
+<view style="background:red" class="box1">哈哈哈</view>
+<text decode>行内样式 &gt; 页内样式 &gt; 全局样式</text>
+<!-- 2.wxss的扩展--尺寸单位：rpx 自适应-->
+<!-- 在iphone6的机型中进行调试 -->
+<!-- iphone6： 1px = 2rpx -->
+<!-- iphone5： 1px = 2.34rpx -->
+<!-- iphone6 plus： 1px=1.81rpx -->
+<view class="box2"></view>
+<view class="box3"></view>
+
+<view>------------------------------</view>
+<view class="page__bd">
+		<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+			<form class="weui-search-bar__form">
+				<view class="weui-search-bar__box">
+					<i class="weui-icon-search"></i>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+				</view>
+				<label class="weui-search-bar__label" bindtap="showInput">
+					<i class="weui-icon-search"></i>
+                    <span class="weui-search-bar__text">搜索</span>
+				</label>
+			</form>
+            <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+		</view>
+</view>
