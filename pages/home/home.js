@@ -1,66 +1,59 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowToast(){
+    wx.showToast({
+      title: '你好啊',
+      duration: 3000,
+      icon: 'loading',
+      mask: true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleShowModal(){
+    wx.showModal({
+      title: '我是标题',
+      content: '我是内容',
+      cancelColor: '#ff0000',
+      //showCancel: false,
+      success: function(res){
+        console.log(res)
+        if(res.cancel){
+          console.log('用户点击了取消按钮')
+        }
+        if(res.confirm){
+          console.log('用户点击了确定按钮')
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleShowLoading(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    }),
+    setTimeout(function () {
+      //隐藏加载框
+      wx.hideLoading()
+    }, 2000)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleShowAction(){
+    wx.showActionSheet({
+      itemList: ['相册','拍照'],
+      itemColor: '#ff0000',
+      success: res=>{
+        console.log(res.tapIndex)
+      },
+      fail: res=>{
+        console.log(res.errMsg)
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function(options){
+    return {
+      title: '你好啊',
+      path: '/pages/home/home',
+      // imageUrl: ''
+    }
   }
 })
